@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "name": "ZombieOne",
+    "image": "https://vignette.wikia.nocookie.net/walkingdead/images/2/28/Sophia_close_up_walker.JPG/revision/latest?cb=20121011235730"
+
+  },
+  {
+    "id": 2,
+    "name": "ZombieTwo",
+    "image": "https://imgix.bustle.com/rehost/2016/9/13/fc7b6c45-2933-4453-9928-fdf14802eb69.jpg"
+ 
+  },
+  {
+    "id": 3,
+    "name": "ZombieThree",
+    "image": "https://ji0mlqfscrmtlpxv-zippykid.netdna-ssl.com/wp-content/uploads/2017/09/The-Walking-Dead-Best-Zombie-MakeUp-FX-14.jpg"
+ 
+  },
+  {
+    "id": 4,
+    "name": "ZombieFour",
+    "image": "http://www.wetpaint.com/wp-content/uploads/2015/03/w630_3d4a9a313abe9f17940f766d7bd2997cTWD512GP10070287-1425509963-750x522.jpg"
+  
+  },
+  {
+    "id": 5,
+    "name": "ZombieFive",
+    "image": "http://i-exc.ccm2.net/iex/1280/1975366798/1065030.jpg"
+  },
+  {
+    "id": 6,
+    "name": "ZombieSix",
+    "image": "https://horrorfreaknews.com/wp-content/uploads/2016/07/Merle.jpg"
+
+  },
+  {
+    "id": 7,
+    "name": "ZombieSeven",
+    "image": "https://nypdecider.files.wordpress.com/2018/03/naked-zombie.jpg?quality=90&strip=all&w=646&h=431&crop=1"
+  },
+  {
+    "id": 8,
+    "name": "ZombieEight",
+    "image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iES5x384M1Qc/v1/800x-1.jpg"
+  },
+  {
+    "id": 9,
+    "name": "ZombieNine",
+    "image": "http://digitalspyuk.cdnds.net/17/17/768x510/gallery-1493216082-walkingdead5.jpg"
+  },
+  {
+    "id": 10,
+    "name": "ZombieTen",
+    "image": "https://i.ytimg.com/vi/9snNo6wD7oY/maxresdefault.jpg"
+  },
+  {
+    "id": 11,
+    "name": "ZombieEleven",
+    "image": "https://www.dondeir.com/wp-content/uploads/2016/08/zombie-zorbing-en-ciudad-de-m%C3%A9xico.jpg"
+  },
+  {
+    "id": 12,
+    "name": "ZombieTwelve",
+    "image": "https://media.vanityfair.com/photos/58e27a9a39259d77497654a7/master/pass/walking-dead-zombies.jpg"
+  }
+]
