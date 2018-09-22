@@ -20,52 +20,52 @@ class App extends Component {
   // }
 
   shuffleArray = array => {
-      for (let i = array.length - 1; i > 0; i--) {
-          let j = Math.floor(Math.random() * (i + 1));
-          [array[i], array[j]] = [array[j], array[i]];
-      }
+    for (let i = array.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
   }
 
-  selectZombie = id => {
+  // selectZombie = id => {
+  //   this.shuffleArray(friends);
+  // }
+
+  select = id => {
+    const findId = this.state.notSelectedZombies.find(item => item.id === id);
+
+    if (findId === undefined) {
+ 
+      this.setState({
+        message: "You guessed incorrectly!",
+        topScore: (this.state.curScore > this.state.topScore) ? this.state.curScore : this.state.topScore,
+        curScore: 0,
+        friends: friends,
+        notSelectedZombies: friends
+      });
+    }
+    else {
+   
+      const newID = this.state.notSelectedZombies.filter(item => item.id !== id);
+
+      this.setState({
+        message: "You guessed correctly!",
+        curScore: this.state.curScore + 1,
+        friends: friends,
+        notSelectedZombies: newID
+      });
+    }
+
     this.shuffleArray(friends);
-  }
-
-    selectDog = breed => {
-        const findDog = this.state.unselectedDogs.find(item => item.breed === breed);
-
-        if(findDog === undefined) {
-            // failure to select a new dog
-            this.setState({ 
-                message: "You guessed incorrectly!",
-                topScore: (this.state.curScore > this.state.topScore) ? this.state.curScore : this.state.topScore,
-                curScore: 0,
-                dogs: dogs,
-                unselectedDogs: dogs
-            });
-        }
-        else {
-            // success to select a new dog
-            const newDogs = this.state.unselectedDogs.filter(item => item.breed !== breed);
-            
-            this.setState({ 
-                message: "You guessed correctly!",
-                curScore: this.state.curScore + 1,
-                dogs: dogs,
-                unselectedDogs: newDogs
-            });
-        }
-
-        this.shuffleArray(dogs);
-    };
+  };
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
       <Wrapper>
-        <Nav 
-           message={this.state.message}
-           curScore={this.state.curScore}
-           topScore={this.state.topScore}
+        <Nav
+          message={this.state.message}
+          curScore={this.state.curScore}
+          topScore={this.state.topScore}
         />
         <Title></Title>
         {this.state.friends.map(friend => (

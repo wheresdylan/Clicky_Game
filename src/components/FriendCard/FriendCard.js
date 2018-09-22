@@ -3,13 +3,13 @@ import "./FriendCard.css";
 
 const FriendCard = props => (
   <div className="card">
-    <span onClick={() => props.selectZombie(props.id)} className="shuffle">
+    <a onClick={() => props.selectZombie(props.id)} className="shuffle">
       <div className="img-container">
 
         <img alt={props.name} src={props.image} />
 
       </div>
-    </span>
+    </a>
   </div>
 );
 
