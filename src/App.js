@@ -12,8 +12,51 @@ class App extends Component {
     message: "Click an image to begin!",
     topScore: 0,
     curScore: 0,
-    friends
+    friends: friends,
+    notSelectedZombies: friends
   };
+
+  // componentDidMount() {
+  // }
+
+  shuffleArray = array => {
+      for (let i = array.length - 1; i > 0; i--) {
+          let j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+      }
+  }
+
+  selectZombie = id => {
+    this.shuffleArray(friends);
+  }
+
+    selectDog = breed => {
+        const findDog = this.state.unselectedDogs.find(item => item.breed === breed);
+
+        if(findDog === undefined) {
+            // failure to select a new dog
+            this.setState({ 
+                message: "You guessed incorrectly!",
+                topScore: (this.state.curScore > this.state.topScore) ? this.state.curScore : this.state.topScore,
+                curScore: 0,
+                dogs: dogs,
+                unselectedDogs: dogs
+            });
+        }
+        else {
+            // success to select a new dog
+            const newDogs = this.state.unselectedDogs.filter(item => item.breed !== breed);
+            
+            this.setState({ 
+                message: "You guessed correctly!",
+                curScore: this.state.curScore + 1,
+                dogs: dogs,
+                unselectedDogs: newDogs
+            });
+        }
+
+        this.shuffleArray(dogs);
+    };
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
@@ -27,13 +70,9 @@ class App extends Component {
         <Title></Title>
         {this.state.friends.map(friend => (
           <FriendCard
-            removeFriend={this.removeFriend}
             id={friend.id}
             key={friend.id}
-            name={friend.name}
             image={friend.image}
-            occupation={friend.occupation}
-            location={friend.location}
           />
         ))}
       </Wrapper>
