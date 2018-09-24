@@ -16,8 +16,8 @@ class App extends Component {
     notSelectedZombies: friends
   };
 
-  // componentDidMount() {
-  // }
+  componentDidMount() {
+  }
 
   shuffleArray = array => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -30,7 +30,7 @@ class App extends Component {
   //   this.shuffleArray(friends);
   // }
 
-  select = id => {
+  selectZombie = id => {
     const findId = this.state.notSelectedZombies.find(item => item.id === id);
 
     if (findId === undefined) {
@@ -70,6 +70,7 @@ class App extends Component {
         <Title></Title>
         {this.state.friends.map(friend => (
           <FriendCard
+            selectZombie={this.selectZombie}
             id={friend.id}
             key={friend.id}
             image={friend.image}

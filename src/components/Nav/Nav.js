@@ -14,7 +14,7 @@ const Nav = props => (
             >
                 {props.message}
             </li>
-            <li>Score: <span style={{color: "yellow"}}>{props.curScore}</span> | Top Score: {props.topScore}</li>
+            <li>Score: <span style={{color: "orange"}}>{props.curScore}</span> | Top Score: {props.topScore}</li>
         </ul>
     </div>
 );

@@ -9,12 +9,21 @@
   text-align: left;
 }
 
+.card a:hover{
+  cursor:pointer;
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+
 .img-container {
-  height: 100%;
+  height: 175px;
   overflow: hidden;
+
   /* text-align: center;
   background:#6CADDC; */
 }
+
 img {
   width: 108%
 }

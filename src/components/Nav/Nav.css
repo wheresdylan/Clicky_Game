@@ -14,10 +14,12 @@
     z-index: 99;
     white-space: nowrap;
     padding-left:25px;
+    padding-top:12px;
 }
 
 .nav-pills a {
     color: red;
+    font-family:fantasy;
 }
 
 .nav-pills a:hover {
@@ -27,14 +29,24 @@
 
 .desc-normal {
     color: #fff;
-    padding-left:220px;
+    padding-left:190px;
     padding-right:150px;
+    font-family:fantasy;
+    padding-top:8px; 
 }
 
 .desc-correct {
     color: #0f0;
+    padding-left:190px;
+    padding-right:150px;
+    font-family:fantasy;
+    padding-top:8px; 
 }
 
 .desc-incorrect {
     color: #f00;
+    padding-left:190px;
+    padding-right:150px;
+    font-family:fantasy;
+    padding-top:8px; 
 }
